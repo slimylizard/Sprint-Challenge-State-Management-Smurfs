@@ -6,7 +6,13 @@ import {
 const initialState = {
     isFetching: false,
     error: '',
-    smurf: [],
+    smurf: [{
+        name: 'ian',
+        age: '12',
+        height: '12',
+        id: null
+
+    }],
 };
 
 export const reducer = (state = initialState, action) => {

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Smurf = props => {
-    console.log(props.smurf.name)
+    console.log(props)
     return (
-        <div>
+        <div> 
             <h1>{props.smurf.name}</h1>
         </div> 
     )

@@ -18,6 +18,7 @@ const SmurfsList = ({ getSmurfs, isFetching, smurf}) => {
         <div className='smurfs-list'>
             <h1>SMURFS</h1>
             {smurf.map(smurf => <Smurf
+            key={smurf.id}
             smurf={smurf}/>)}
         </div>
     );
