@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getSmurfs } from './store/actions';
+import Smurf from './Smurf';
 
 const SmurfsList = ({ getSmurfs, isFetching, smurf}) => {
     useEffect(() => {
@@ -16,14 +17,8 @@ const SmurfsList = ({ getSmurfs, isFetching, smurf}) => {
     return (
         <div className='smurfs-list'>
             <h1>SMURFS</h1>
-            {smurf.map(smurf => (
-                <div>
-                    <h2>{smurf.name}</h2>
-                    <p>{smurf.age}</p>
-                    <p>{smurf.height}</p>
-                    <p>{smurf.id}</p>
-                </div>
-            ))}
+            {smurf.map(smurf => <Smurf
+            smurf={smurf}/>)}
         </div>
     );
 }
