@@ -1,6 +1,7 @@
 import {
     FETCHING_DATA_START,
-    FETCHING_DATA_SUCCESS
+    FETCHING_DATA_SUCCESS,
+    ADD_SMURF
 } from '../store/actions';
 
 const initialState = {
@@ -29,6 +30,13 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 isFetching: false,
                 smurf: action.payload
+            }
+        case ADD_SMURF:
+            return {
+                ...state,
+                smurf:[
+                    ...state.smurf, action.payload
+                ]
             }
         default:
             return state;
