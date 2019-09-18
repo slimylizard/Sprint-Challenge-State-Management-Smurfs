@@ -1,8 +1,8 @@
 {
     "version": 2,
-    "name": "project-name",
-    "builds": [{ "src": "project-name/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+    "name": "Sprint-Challenge-State-Management-Smurfs",
+    "builds": [{ "src": "Sprint-Challenge-State-Management-Smurfs/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
     "routes": [
-        { "src": "/(.*)", "dest": "project-name/$1" }
+        { "src": "/(.*)", "dest": "Sprint-Challenge-State-Management-Smurfs/$1" }
     ]
 }
